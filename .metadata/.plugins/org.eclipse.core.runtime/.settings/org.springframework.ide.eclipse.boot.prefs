@@ -1,13 +1,13 @@
 eclipse.preferences.version=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=1
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=ShopmeBackend
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=ShopmeFrontend
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.2.0
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=backend spring web project
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Shopme web application
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.shopme
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=ShopmeBackend
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=ShopmeFrontend
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.shopme
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN

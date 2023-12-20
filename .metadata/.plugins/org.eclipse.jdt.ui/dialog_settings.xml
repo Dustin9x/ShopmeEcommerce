@@ -30,4 +30,7 @@
 		<item key="create_constructor" value="false"/>
 		<item key="create_unimplemented" value="true"/>
 	</section>
+	<section name="JavaEditorCodeMiningConfigurationBlock">
+		<item key="expanded0" value="true"/>
+	</section>
 </section>
