@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home - Shopme Admin</title>
+	
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} "/>
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+</head>
+<body>
+	<div>
+		<h1>Shopme Control Panel</h1>
+	</div>
+	
+	<div>
+		<p>Shopme Control Panel - Copyright &copy; Shopme</p>
+	</div>
+</body>
+</html>
