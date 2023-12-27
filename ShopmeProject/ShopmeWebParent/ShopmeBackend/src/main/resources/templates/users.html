@@ -7,6 +7,10 @@
 
 <link th:rel="stylesheet"
 	th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} " />
+<link th:rel="stylesheet"
+	th:href="@{/fontawesome/all.min.css} " />
+<link th:rel="stylesheet"
+	th:href="@{/style.css} " />
 <script type="text/javascript"
 	th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
 <script type="text/javascript"
@@ -77,13 +81,18 @@
 				<tbody>
 					<tr th:each="user : ${listUsers}">
 						<td>[[${user.id}]]</td>
-						<td></td>
+						<td><i class="fa-solid fa-image-portrait fa-2xl icon-silver"></i></td>
 						<td>[[${user.email}]]</td>
 						<td>[[${user.firstName}]]</td>
 						<td>[[${user.lastName}]]</td>
 						<td>[[${user.roles}]]</td>
-						<td>[[${user.enabled}]]</td>
-						<td>Edit &nbsp; Delete</td>
+						<td>
+							<a th:if="${user.enabled}"><i class="fa-solid fa-square-check icon-green"></i></a>
+							<a th:if="${!user.enabled}"><i class="fa-regular fa-square"></i></a>
+						</td>
+						<td>
+							<a th:href="@{'/users/edit/' + ${user.id}}" title="Edit this user"><i class="fa-solid fa-pen-to-square icon-green"></i></a>
+							<a><i class="fa-solid fa-trash icon-red ml-3"></i></a>
 					</tr>
 				</tbody>
 			</table>
