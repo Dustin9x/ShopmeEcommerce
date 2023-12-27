@@ -11,7 +11,10 @@ import org.springframework.stereotype.Service;
 import com.shopme.common.entity.Role;
 import com.shopme.common.entity.User;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class UserService {
 	@Autowired
 	private UserRepository userRepo;
@@ -66,5 +69,18 @@ public class UserService {
 		} catch(NoSuchElementException ex) {
 			throw new UserNotFoundException("Could not found the user with id: " + id);
 		}
+	}
+	
+	public void delete(Integer id) throws UserNotFoundException {
+		Long countById = userRepo.countById(id);
+		if(countById == null || countById == 0) {
+			throw new UserNotFoundException("Could not found the user with id: " + id);
+		}
+		
+		userRepo.deleteById(id);
+	}
+	
+	public void updateUserEnableStatus(Integer id, boolean enabled) {
+		userRepo.updateEnableStatus(id, enabled);
 	}
 }
