@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -25,8 +26,17 @@ public class UserController {
 	private UserService service;
 	
 	@GetMapping("/users")
-	public String listAll(Model model) {
-		List<User> listUsers = service.listAll();
+	public String listFirstPage(Model model) {
+		return listByPage(1,model);
+	}
+	
+	@GetMapping("/users/page/{pageNum}")
+	public String listByPage(@PathVariable(name = "pageNum") int pageNum, Model model) {
+		Page<User> page = service.listByPage(pageNum);
+		List<User> listUsers = page.getContent();
+		System.out.println("Pagenum: "+pageNum);
+		System.out.println("Total elements: "+page.getTotalElements());
+		System.out.println("Total pages: "+page.getTotalPages());
 		model.addAttribute("listUsers", listUsers);
 		return "users";
 	}
@@ -49,10 +59,13 @@ public class UserController {
 			user.setPhotos(fileName);
 			User savedUser = service.save(user);
 			String uploadDir = "user-photos/"+savedUser.getId();
+			FileUploadUtil.cleanDir(uploadDir);
 			FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+		}else {
+			if(user.getPhotos().isEmpty()) user.setPhotos(null);
+			service.save(user);
 		}
 		
-//		service.save(user);
 		
 		redirectAttributes.addFlashAttribute("message", "The user has been saved successfully!");
 		return "redirect:/users";
@@ -76,7 +89,6 @@ public class UserController {
 	@GetMapping("/users/delete/{id}")
 	public String deleteUser(@PathVariable(name = "id") Integer id, Model model, RedirectAttributes redirectAttributes) {
 		try {
-			List<Role> listRoles = service.listRoles();
 			service.delete(id);
 			redirectAttributes.addFlashAttribute("message", "The user ID: " + id + " has been deleted successfully");
 		}catch(UserNotFoundException ex) {

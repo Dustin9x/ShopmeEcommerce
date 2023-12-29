@@ -105,8 +105,9 @@
 				<div class="form-group row">
 					<lable class="col-sm-4 col-form-lable">Phôt:</lable>
 					<div class="col-sm-8">
+						<input type="hidden" th:field="*{photos}" />
 						<input type="file" id="fileImage" name="image" accept="image/png, image/ipg, image/jpeg" class="mb-2"/>
-						<img id="thumbnail" alt="Photo review" th:src="@{/images/default-user.png}" style="width: 100px; height:100px; object-fit:cover" class="rounded-circle"/>
+						<img id="thumbnail" alt="Photo review" th:src="@{${user.photosImagePath}}" style="width: 100px; height:100px; object-fit:cover" class="rounded-circle"/>
 					</div>
 				</div>
 				
