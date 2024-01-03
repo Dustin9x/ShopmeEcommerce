@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private String getRedirectURLtoAffectedUser(User user)&apos; from &apos;com.shopme.admin.user.UserController.saveUser(...)&apos; to &apos;com.shopme.admin.user.UserController&apos;&#x0D;&#x0A;- Original project: &apos;ShopmeBackend&apos;&#x0D;&#x0A;- Method name: &apos;getRedirectURLtoAffectedUser&apos;&#x0D;&#x0A;- Destination type: &apos;com.shopme.admin.user.UserController&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;getRedirectURLtoAffectedUser&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.shopme.admin.user{UserController.java" name="getRedirectURLtoAffectedUser" replace="false" selection="3390 149" stamp="1704277007725" version="1.0" visibility="2"/>
+</session>
