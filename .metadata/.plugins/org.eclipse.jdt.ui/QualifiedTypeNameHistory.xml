@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.JoinTable"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFWorkbook"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletOutputStream"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFSheet"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFRow"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFCell"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFCellStyle"/>
+    <fullyQualifiedTypeName name="org.apache.poi.xssf.usermodel.XSSFFont"/>
 </qualifiedTypeNameHistroy>
