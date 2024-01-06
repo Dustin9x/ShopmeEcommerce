@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Shopme Admin</title>
+
+<link th:rel="stylesheet"
+	th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} " />
+</head>
+<body>
+	<div class="container-fluid px-0">
+		
+		<div>
+			<h1>Custom Login Page</h1>
+		</div>
+
+		<div class="text-center">
+			<p>Shopme Control Panel - Copyright &copy; Shopme</p>
+		</div>
+	</div>
+
+</body>
+</html>
