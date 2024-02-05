@@ -9,6 +9,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.RememberMeServices;
+import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices;
+import org.springframework.security.web.authentication.rememberme.TokenBasedRememberMeServices.RememberMeTokenAlgorithm;
 
 @Configuration
 @EnableWebSecurity
@@ -37,13 +40,16 @@ public class WebSecurityConfig {
 		http.authenticationProvider(authenticationProvider());
         http
                 .authorizeHttpRequests(requests -> requests
-                        .requestMatchers("/login","/images/**","/js/**","/webjars/**").permitAll()
+                        .requestMatchers("/login", "/images/**", "/js/**", "/webjars/**").permitAll()
                         .anyRequest().authenticated())
-                .formLogin(login -> login 
+                .formLogin(login -> login
                         .loginPage("/login")
                         .usernameParameter("email")
                         .permitAll())
-                .logout(logout -> logout.permitAll());
+                .logout(logout -> logout.permitAll())
+                .rememberMe(me -> me
+                		.key("AbcDefgHijklmanOprswYz_123456789")
+                		.tokenValiditySeconds(7 * 24 * 60 * 60));
 		return http.build();
 	}
 	

@@ -42,7 +42,9 @@
 							<i class="fa-solid fa-user fa-xl icon-silver"></i>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" sec:authentication="principal.username"></a>
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" 
+							th:href="@{/account}"
+							sec:authentication="principal.FullName"></a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" id="logoutlink" href="">Logout</a>
 							</div>

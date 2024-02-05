@@ -1,0 +1,20 @@
+$(document).ready(function(){
+		$("#logoutlink").on("click", function(e){
+			e.preventDefault();
+			document.logoutForm.submit();
+		});
+		customizeDropDownMenu();
+	});
+	
+function customizeDropDownMenu(){
+	$(".navbar .dropdown").hover(
+		fucntion(){
+			$(this).find('.dropdown-menu').first().stop(true,true).delay(250).slideDown
+		},
+		fucntion(){
+		}
+	)
+	$(".dropdown > a").click(function() {
+		location.href = this.href;
+	})
+}
